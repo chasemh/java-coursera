@@ -1,0 +1,25 @@
+<html>
+  <script src="http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js">
+  </script>
+  <title> Filter Fun </title>
+  <body>
+    <h1> Filter Fun </h1>
+    <br>
+    <canvas id="imageCanvas" >
+    </canvas>
+    <br>
+    <h2> Load Image </h2>
+    <input id="finput" type="file" mulitple="false" accept="image/*" onchange="upload( 'imageCanvas', 'finput' )" >
+    <div id="imageDimensions" >
+    </div>
+    <br>
+    <h2> Choose Filter </h2>
+    <input id="grayscaleButton" type="button" value="Grayscale" onclick="doGrayscale()" >
+    <br>
+    <input id="redscaleButton" type="button" value="Redscale" onclick="doRedscale()" >
+    <br>
+    <input id="rainbowButton" type="button" value="Rainbow" onclick="doRainbow()" >
+    <br>
+    <input id="resetButton" type="button" value="Reset Image" onclick="doReset()" >
+  </body>
+</html>
