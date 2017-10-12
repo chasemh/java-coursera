@@ -1,0 +1,14 @@
+canvas {
+  width: 200pt;
+  height: 100pt;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.limeBack {
+  background-color: lime;
+}
+
+.orangeBack {
+  background-color: orange;
+}

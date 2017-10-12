@@ -1,0 +1,11 @@
+<html>
+  <title>Inputs and Events</title>
+  <body>
+    <h1>Canvas Inputs and Events</h1>
+    <canvas id="canvas1" >
+    </canvas>
+    <input type="button" value="Change Color" onclick="doColor('canvas1', 'lime')" >
+    <input id="clrPicker" type="color" value="0000FF" onchange="colorPicker( 'canvas1' )" >
+  </body>
+  <input id="slider" type="range" min="10" max="100" oninput="doSquare( 'canvas1' )" value ="10"
+</html>

@@ -1,0 +1,20 @@
+<html>
+  <script src="http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js">
+  </script>
+  <title>Greenscreen</title>
+  <body>
+    <h1>Greenscreen</h1>
+    <canvas id="foreground" >
+    </canvas>
+    <canvas id="background" >
+    </canvas>
+    <br>
+    Foreground Image:
+    <input id="foregroundInput" type="file" multiple="false" accept="image/*" onchange="upload('foreground', 'foregroundInput')" >
+    Background Image:
+    <input id="backgroundInput" type="file" multiple="false" accept="image/*" onchange="upload('background', 'backgroundInput')" >
+    <br>
+    <br>
+    <input id="greenScreenButton" type="button" value="Greenscreen" onclick="doGreenscreen( 'foreground' )" >
+    <input id="clearButton" type="button" value="Clear Images" onclick="clearImages('foreground', 'background')" >
+</html>
