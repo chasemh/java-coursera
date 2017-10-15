@@ -14,10 +14,10 @@
   * Special codon that indicates the end of a gene
 * Human Genome contains 3 billion of these characters, making it difficult to analyze by hand
 
-## Understanding strings
+### Understanding strings
 * While computers store all information in numbers, strings are used to store human-readable data
 
-## Developing an Algorithm
+### Developing an Algorithm
 * Problem statement: Find a gene in a genome string
 * Use knowledge of start and stop codons
 * Essentially capturing the substring between the start and stop codons
@@ -26,7 +26,7 @@
   * Real genes have multiple of three codons
   * There are more than one stop codons
 
-## Positions on Strings
+### Positions on Strings
 * Strings are just arrays of characters
 * Arrays are zero indexed, that is, the first slot in the array is index 0
 * Slots in array == Indices or Indexes
@@ -43,7 +43,7 @@
   * `.endsWith("somestring")`: Like `startsWith("somestring")` but checks to see if the calling string ends with `"somestring"`
 * Don't worry about memorizing all the methods, just look them up from the Java API docs
 
-## Translating into Code
+### Translating into Code
 * Find the index of the start codon, if it exists
 * Find the index of the stop codon, if it exists. Start looking for the stop codon at the index of the start codon
 * If either the start or stop index are -1, return an empty string as there is no gene in the given sequence
@@ -51,8 +51,23 @@
   * Add the length of the stop codon to capture the entirety of the stop codon in the gene
 * Return the result  
 
-## Java Math
+### Java Math
 * Previous example was gross oversimplification
 * Real genes must be made of three codons
   * So a valid (but still simplified( gene string must start with `ATG` and a multiple of three characters before hitting `TAA`
-*
+
+## Finding all genes in DNA
+
+### Conceptual Understanding
+* Indefinite loops (`while` loops)
+* while loop prototype
+```java
+while( condition is true ) {
+  // Do stuff
+}
+```
+### Three Stop Codons
+* There are actually three stop codons
+  * `TAA`
+  * `TGA`
+  * `TAG`
