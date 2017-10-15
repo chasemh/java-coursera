@@ -77,5 +77,5 @@ while( condition is true ) {
 * OR == `||`
 * Java uses "short circuit evaluation" with logical statements
   * i.e. If Java can evaluate a logical expression based on only part of the expression, then it does not check the rest of the expression
-  * For example ` true || ( x > 10 && y < 4)` will evaluation to true because the left operator is true and Java wont't mess with the evaluating the rest of the expression
+  * For example ` true || ( x > 10 && y < 4)` will evaluation to true because the left operator is true and Java won't mess with the evaluating the rest of the expression
 * Useful if you have a potentially program crashing logical statement
