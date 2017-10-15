@@ -9,6 +9,24 @@
  */
 public class Part3 {
     
+    public int getPositiveMinimum( int a, int b ) {
+        
+        // If a is positive and either a is less than b or b is negative, return a
+        // Otherwise, if b is positive and either b is less than a or a is negative, return b
+        // If both are negative, return -1
+        
+        // Use <= here to cover the case when a == b
+        if( a >= 0 && ( a <= b || b < 0 ) ){
+            return a;
+        }
+        else if( b >=0 && ( b < a || a < 0 ) ) { 
+            return b;
+        }
+        
+        // Both numbers must be less than 0
+        return -1;
+    }
+    
     public int findStopCodon( String dna, int startIndex, String stopCodon ) {
         
         // Search through dna for the desired stopCodon
@@ -29,7 +47,8 @@ public class Part3 {
                 
         }
         
-        return dna.length();
+        //return dna.length();
+        return -1;
     }
     
     public String findGene( String dna ) {
@@ -43,9 +62,21 @@ public class Part3 {
         int tgaIndex = findStopCodon( dna, startIndex, "TGA" );
         int tagIndex = findStopCodon( dna, startIndex, "TAG" );
         
-        int minIndex = Math.min( tagIndex, Math.min( taaIndex, tgaIndex ) );
+        // Older method when returning dna.length() when no index is found
+        /* int minIndex = Math.min( tagIndex, Math.min( taaIndex, tgaIndex ) );
         if( minIndex != dna.length() ) {
             return dna.substring( startIndex, minIndex + 3 );
+        }
+        */
+       
+       // New method when returning -1 when no index is found 
+       // Find the minimum, positive index out of taaIndex, tgaIndex, tagIndex
+       // If the minimum isn't -1, get the substring from the startIndex to the minIndex + 3
+       // Otherwise, return the empty string
+      
+       int minIndex = getPositiveMinimum( getPositiveMinimum( taaIndex, tgaIndex ), tagIndex );
+       if( minIndex != -1 ) {
+           return dna.substring( startIndex, minIndex + 3 );
         }
         
         return "";
