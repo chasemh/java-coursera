@@ -81,4 +81,15 @@ while( condition is true ) {
 * Useful if you have a potentially program crashing logical statement
 
 ## Using the StorageResource Class
-* 
+
+### Separation of Concerns
+* Avoid repetition and copy/paste in code
+* Separation of Concerns
+  * Separation the fetching, reading, otherwise obtaining of data from methods that manipulate the data in some way
+  * For example, `printAllGenes()` shouldn't read all of the genes from a string and then print them. It should delegate the reading of the genes to a method like `getGenes()` and then operate upon the result of that method. This way `getGenes()` can be used in many different methods rather than reimplementing the reading of genes from a string in every method. Keeping the logic to get genes from a string also makes it simpler to debug, as all of the code that does this is only in one method.
+* Use the Duke `StorageResource` class to hold the genes for now
+  * Use standard  `ArrayList` later
+
+### StorageResource Class
+* Use `.add( "somestring" )` to add strings
+* Use `.data()` to get an interable for looping
