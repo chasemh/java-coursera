@@ -12,3 +12,11 @@
   * `import org.apache.commons.csv.*;`
 * Get CSVparser from FileResource
   * `CSVParser parser = fr.getCSVParser();`
+
+## Weather CSV Problem
+
+### Converting Strings to Numbers
+* CSVParser reads data from CSV files as strings
+* Need to convert this data to numeric values
+* String to Integer: `Integer.parseInt( "1" );`
+* String to Double: `Double.parseDouble( "3.14" );`
