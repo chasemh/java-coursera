@@ -23,7 +23,11 @@ public class Part2 {
             }
         }
         
-        return cgCount / (double)dna.length();
+        // Be careful with integer division 
+        // Need to make sure that one of the values is a floating point number before performing division
+        // If the double cast is around the entire expression, then the floating point portion of the quotient
+        // will already be lost before the cast.
+        return (double)cgCount / dna.length();
     }
     
     public int countCTG( String dna ) {

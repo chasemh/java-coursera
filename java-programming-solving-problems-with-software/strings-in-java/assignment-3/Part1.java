@@ -85,13 +85,22 @@ public class Part1 {
         // Repeatedly call findGene to find all of the genes
         // Find the index of ATG 
         // Pass the substring from ATG to the end of dna to findGene
-        // Find the next index of ATG and repeat
+        // Find the index just past the current gene and repeat
         
         int startCodonIndex = dna.indexOf( "ATG" );
         
-        while( startCodonIndex != -1 ) {
-            System.out.println( findGene( dna.substring( startCodonIndex ) ) );
-            startCodonIndex = dna.indexOf( "ATG", startCodonIndex + 1 );
+        while( true ) {
+            String gene = findGene( dna.substring( startCodonIndex ) );
+            if( gene.isEmpty() ) {
+                break;
+            }
+            System.out.println( gene );
+            
+            // Start looking for the next gene at the index in the dna string right after the current gene
+            // To do this, find the index of the current gene in the string starting at the current index
+            // of the start codon. Then add the length of the gene we found to this index.
+            // The resultant value should yield the index right after the current gene ends in the dna string.
+            startCodonIndex = dna.indexOf( gene, startCodonIndex ) + gene.length();
         }
        
     }
@@ -105,13 +114,18 @@ public class Part1 {
         int startCodonIndex = dna.indexOf( "ATG" );
         StorageResource genes = new StorageResource();
         
-        while( startCodonIndex != -1 ) {
+        while( true ) {
             String gene = findGene( dna.substring( startCodonIndex ) );
             if( gene.isEmpty() ) {
                 break;
             }
             genes.add( gene );
-            startCodonIndex = dna.indexOf( "ATG", startCodonIndex + 1 );
+            
+            // Start looking for the next gene at the index in the dna string right after the current gene
+            // To do this, find the index of the current gene in the string starting at the current index
+            // of the start codon. Then add the length of the gene we found to this index.
+            // The resultant value should yield the index right after the current gene ends in the dna string.
+            startCodonIndex = dna.indexOf( gene, startCodonIndex ) + gene.length();
         }
         
         return genes;
