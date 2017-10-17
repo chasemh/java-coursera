@@ -1,7 +1,7 @@
 import edu.duke.*;
 import org.apache.commons.csv.*;
 /**
- * Exercise solutions from the Parsing Export Data
+ * Exercise solutions from the Parsing Export Data Problem Set
  * https://www.coursera.org/learn/java-programming/supplement/Qu17T/programming-exercise-parsing-export-data
  *
  * @author Chase Hennion
@@ -73,13 +73,30 @@ import org.apache.commons.csv.*;
          // Test numberOfExporters
          parser = fr.getCSVParser();
          System.out.println( "Testing numberOfExporters with exportItem = gold" );
-         numberOfExporters( parser, "gold" );
+         System.out.println( numberOfExporters( parser, "gold" ) );
 
          // Test bigExporters
          parser = fr.getCSVParser();
          System.out.println( "Testing bigExporters with amount = $999,999,999" );
          bigExporters( parser, "$999,999,999" );
      }
+     
+     public void quizTester() {
+         FileResource fr = new FileResource();
+         CSVParser parser = fr.getCSVParser();
+         
+         listExportersTwoProducts( parser, "cotton", "flowers" );
+         
+         parser = fr.getCSVParser();
+         System.out.println( "Testing numberOfExporters with exportItem = cocoa" );
+         System.out.println( numberOfExporters( parser, "cocoa" ) );
+         
+         parser = fr.getCSVParser();
+         System.out.println( "Testing bigExporters with amount = $999,999,999,999" );
+         bigExporters( parser, "$999,999,999,999" );
+         
+     }
+     
 
 
 

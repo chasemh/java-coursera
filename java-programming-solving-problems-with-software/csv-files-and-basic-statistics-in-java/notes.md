@@ -20,3 +20,11 @@
 * Need to convert this data to numeric values
 * String to Integer: `Integer.parseInt( "1" );`
 * String to Double: `Double.parseDouble( "3.14" );`
+
+### Java for Nothing - null
+* `null` means nothing or no object
+* All expressions have types but what type is null?
+  * It has it's own special type which cannot be used in Java code
+  * Can be converted into any object type
+* Primitive types cannot be null
+* Object types can be null
