@@ -1,6 +1,6 @@
 # java-coursera
 
-This repo contains code created during Duke University's [Programming Foundations with JavaScript, HTML and CSS Course](https://www.coursera.org/learn/duke-programming-web/home/welcome)
+This repo contains code created during Duke University's [Java Programming and Software Engineering Fundamentals Specialization](https://www.coursera.org/specializations/java-programming)
 
 ## Author
 Chase Hennion  
