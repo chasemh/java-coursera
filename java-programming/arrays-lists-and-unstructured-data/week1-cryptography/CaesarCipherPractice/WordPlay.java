@@ -1,8 +1,5 @@
 package chasemh.java.coursera;
 
-import edu.duke.*;
-import java.io.*;
-
 /**
  * Exercise solutions to Part 1: Word Play
  * https://www.coursera.org/learn/java-programming-arrays-lists-data/supplement/DvNzQ/programming-exercise-implementing-the-caesar-cipher
