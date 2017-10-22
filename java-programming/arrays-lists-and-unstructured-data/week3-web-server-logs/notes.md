@@ -52,4 +52,8 @@ a.equals(c); // True. The two objects contain the same logical content
 
 ## Counting Website Visits
 
-### Intro 
+### Intro
+* How many visits per IP?
+
+### Developing an Algorithm
+* Use a HashMap to map IPs to occurrences of the IP
