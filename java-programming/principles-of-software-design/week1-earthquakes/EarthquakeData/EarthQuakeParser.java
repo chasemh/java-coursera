@@ -1,3 +1,4 @@
+package chasemh.java.coursera;
 
 import java.io.File;
 import java.io.IOException;

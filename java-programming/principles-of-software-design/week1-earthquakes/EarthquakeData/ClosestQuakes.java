@@ -1,3 +1,4 @@
+package chasemh.java.coursera;
 
 /**
  * Find N-closest quakes

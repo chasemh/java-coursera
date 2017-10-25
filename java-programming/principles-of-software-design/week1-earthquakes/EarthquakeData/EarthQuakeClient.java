@@ -1,3 +1,4 @@
+package chasemh.java.coursera;
 import java.util.*;
 import edu.duke.*;
 

@@ -1,3 +1,4 @@
+package chasemh.java.coursera;
 
 /**
  * Exercise solutions Assignment: Searching Earthquake Data
