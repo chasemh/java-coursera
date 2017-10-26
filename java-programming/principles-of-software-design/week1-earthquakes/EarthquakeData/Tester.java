@@ -80,6 +80,38 @@ public class Tester {
 		
 		System.out.println();
 	}
+	
+	public void quiz2() {
+		String source = "data/nov20quakedata.atom";
+		EarthQuakeClient eqc = new EarthQuakeClient();
+		LargestQuakes lq = new LargestQuakes();
+		
+		eqc.quakesOfDepth( source, -12000.0, -10000.0 );
+		
+		System.out.println();
+		
+		eqc.quakesOfDepth( source, -4000.0, -2000.0 );
+		
+		System.out.println();
+		
+		eqc.quakesByPhrase( source, "start", "Quarry Blast" );
+		
+		System.out.println();
+		
+		eqc.quakesByPhrase( source, "end", "Alaska" );
+		
+		System.out.println();
+		
+		eqc.quakesByPhrase( source, "any", "Can" );
+		
+		System.out.println();
+		
+		lq.findLargestQuakes( source, 20);
+		
+		System.out.println();
+		
+		lq.findLargestQuakes( source, 50);
+	}
 
 	public static void main(String[] args) {
 		Tester t = new Tester();
@@ -90,7 +122,8 @@ public class Tester {
 		//t.testFindClosestQuakes();
 		//t.testFindLargestQuakes();
 		//t.testIndexOfLargest();
-		t.quiz1();
+		//t.quiz1();
+		t.quiz2();
 
 	}
 
