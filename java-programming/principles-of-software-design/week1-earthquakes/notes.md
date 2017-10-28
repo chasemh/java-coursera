@@ -34,4 +34,4 @@
 
 ## MatchAll
 * Can write a filter that accepts many filter items to filter on
-  * Example of composition 
+  * Example of composition
