@@ -51,3 +51,38 @@ for( int i = 0; i < toSort.length - 1 ; ++i ) {
 * Important interfaces for sorting:
   * Comparable
   * Comparator
+
+## Sorting at Scale
+
+### Intro
+* Can use `System.nanoTime()` for code timings
+
+### Comparable
+* Comparable interface promises one method: `compareTo`
+* Used to define a natural ordering for the type
+* Comparable is a generic type
+* String compareTo uses lexicographical ordering
+  * Iterate through the string as long as the letters are the same
+  * Special characters are handled through numerical comparison of they character
+    * ASCII Value etc.
+* Comparable return type (suppose `a.compareTo( b )` )
+  * `a` is less than `b`: Returns Negative Number
+  * `a` is greater than `b`: Returns Positive Number
+  * `a` is equal to `b`: Returns 0
+* Typically 1, -1, and 0 will be returned from a `compareTo` call, but the explicit value returned is not enforced. Can only rely upon the return value's sign.
+* This is typically because  `compareTo` is implemented using subtraction, such is the case with String `compareTo`.
+* Can remember the return signs of `compareTo` by thinking of a comparison of two numbers, a and b
+  * If a and be are equal, a - b will be 0. 0 is what is returned when a and be are equal.
+  * If a is less than b, a - b will be less than 0, and a value that is less than zero is returned by `compareTo` in this situation.
+  * If a is greater than b, a - b will be greater than 0, and a value that is greater than zero is returned by `compareTo` in this situation
+
+### Comparator
+* Defines ordering for another type
+* Comparable is bound to the type in order to determine natural ordering
+  * `a.compareTo(b)`: Asking a to compare itself to b
+* Comparators are defined outside of the type definition
+  * `myComparator.compare( a, b )`
+  * The logic for the comparison between a and b is defined within the `myComparator` class.
+  * Allows you to implement different comparisons for the same type
+* `Collections.sort` accepts a comparator as a parameter. The sorting method will then use that comparator for sorting
+  * Recall that when a class implements an interface, the implementing class may be treated as an instance of the instance class.
