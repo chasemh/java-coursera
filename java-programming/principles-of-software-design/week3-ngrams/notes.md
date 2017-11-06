@@ -41,3 +41,24 @@
   * Stop searching once you hit the end of the string
 
 ### Implementing Order-Two
+* Like Markov One but looking at two character strings to determine the following characters
+
+### Interfaces and Abstract Classes
+* Common practice to have custom Interfaces begin with the letter i
+  * For Example `IMarkovModel`
+* Recall that when a class implements an interface, instances of that class may be treated as instances of the interface itself
+  * Allows great flexibility when writing methods as the method may accept any class that is implementing the interface as a parameter
+* Open-Closed Software Design Principle
+  * Open for extensions, closed for modification
+  * Don't extend the functionality of code by modifying already written and tested code
+* Each developed Markov class contains shared state and code
+  * Capture commonality in an abstract class and then use inheritance
+* Declare an abstract class by using the keyword `abstract` in the class definition
+  * For example `public abstract class MyAbstractClass`
+* Typically, when you create an abstract class, you will want to change your instance variables and to `protected` rather than `private`
+* Protected means that only subclasses may directly access the instance variables. The variables are still private to external access for unrelated classes
+* This should also be done for method declarations as well that will need to be called in the subclasses
+* Abstract classes have at least one method in it that is marked abstract and not implemented in the abstract class
+  * Typically reserved for a method that will require custom implementation in the subclasses
+  * Subclasses must implement these methods themselves
+* Designate an inheritance relationship with the `extends` keyword
