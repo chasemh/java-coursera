@@ -62,3 +62,18 @@
   * Typically reserved for a method that will require custom implementation in the subclasses
   * Subclasses must implement these methods themselves
 * Designate an inheritance relationship with the `extends` keyword
+
+## Word N-Grams
+
+### Intro
+* Instead of predicting the next letter, now predicting the next word
+
+### Order-One Concepts
+* Good Design: Implementation can change but the interface doesn't
+  * Abstraction
+* Going to be using the same Markov class interfaces but the classes will be updated to find random words instead of letters
+
+### Order-One Helper Functions
+* Arrays do not have a `indexOf` method. This will need to be replaced with a custom helper function.
+* `substring` calls can be replaced with Array indexing
+* 
