@@ -104,7 +104,11 @@ public class MarkovRunnerWithInterface {
 		//mr.compareMethods( 42, 2, 1000 );
 		
 		// Practice Quiz
-		mr.testHashMap( 615, 5 );
+		//mr.testHashMap( 615, 5 );
+		
+		// Section Quiz
+		mr.testHashMap( 792, 6 );
+		//mr.testHashMap(531, 5);
 	}
 	
 }

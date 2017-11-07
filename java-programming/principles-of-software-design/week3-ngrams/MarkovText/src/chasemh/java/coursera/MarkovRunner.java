@@ -95,11 +95,17 @@ public class MarkovRunner {
 		//mr.runMarkovFour( 25 );
 		//mr.runMarkovModel( 38, 6 );
 		
-		// Practice Quize
+		// Practice Quiz
 		//mr.runMarkovZero( 88 );
 		//mr.runMarkovOne( 273 );
 		//mr.runMarkovFour( 371 );
-		mr.runMarkovModel( 365, 8 );
+		//mr.runMarkovModel( 365, 8 );
+		
+		// Section Quiz
+		//mr.runMarkovZero( 1024 );
+		//mr.runMarkovOne( 365 );
+		//mr.runMarkovFour( 715 );
+		//mr.runMarkovModel( 953, 7 );
 	}
 	
 }

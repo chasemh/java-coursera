@@ -76,4 +76,23 @@
 ### Order-One Helper Functions
 * Arrays do not have a `indexOf` method. This will need to be replaced with a custom helper function.
 * `substring` calls can be replaced with Array indexing
-* 
+
+### WordGram Class
+* WordGram will contain a sequence of strings and methods for interacting with the sequence
+
+### WordGram Class Implementation
+* State: Array of Strings
+* Behavior
+  * Get method for getting length `.length()`
+  * Get method to get a string at a certain index, `.wordAt( int index )`
+  * `.toString()`
+  * `.equals()`
+
+### Equals and HashCode Methods
+* `.hashCode()` allows custom objects to be used as keys in a HashMap
+* `.equals()` method always accepts a parameter of type `Object`
+* This parameter needs to be cast into whatever object is needed for the comparison
+* `.hashCode()` converts an object into a hash code, which is like an index into a map
+  * Important to make the hash code as unique as possible to ensure that map lookups remain quick
+  * Could have everything have the same hash code but then performance would degrade because everything is in the same map bucket
+    * If more than one object ends up in a bucket, they objects are distinguished using `.equals()`

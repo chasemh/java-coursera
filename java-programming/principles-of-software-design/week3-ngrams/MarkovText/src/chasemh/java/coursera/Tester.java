@@ -57,7 +57,11 @@ public class Tester {
 		
 		// Practice Quiz
 		//t.testGetFollowsWithFile( "o" );
-		t.testGetFollowsWithFile( "th" );
+		//t.testGetFollowsWithFile( "th" );
+		
+		// Section Quiz
+		//t.testGetFollowsWithFile( "o" );
+		t.testGetFollowsWithFile( "he" );
 		
 	}
 
